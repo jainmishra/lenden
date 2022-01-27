@@ -1,0 +1,49 @@
+.myrow
+{
+  margin-top: 5rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+img{
+  height: 10rem;
+  width: 10rem;
+  opacity: 0.94;
+}
+.sha{
+  /* box-shadow: 10px 10px grey; */
+  transition-duration: 0.4s;
+  /* box-shadow:0px 2px 10px 5px #97B1BF; */
+}
+.sha:hover{
+    box-shadow:0px 2px 10px 5px #97B1BF;
+}
+img:hover{
+  opacity: 1;
+
+}
+.add{
+  margin-top: 5rem;
+  margin-left: 70rem;
+  margin-bottom: 10rem;
+}
+.addbutton {
+    position: relative;
+    background-color: blue;
+    border: none;
+    padding: 2rem;
+    width: 20rem;
+    text-align: center;
+    /* -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.addbutton:hover{
+   background:rgb(19, 18, 18);
+   box-shadow:0px 2px 10px 5px #97B1BF;
+   color:rgb(250, 250, 250);
+}
+h5{
+  text-align: center;
+}
