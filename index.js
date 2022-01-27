@@ -20,7 +20,7 @@ const itemSchema={
     ph:String,
     desc:String,
     price:String,
-    //addres:String,
+    addres:String,
 
 };
 const listPapaSchema={
