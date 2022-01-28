@@ -3,17 +3,19 @@ const bp=require("body-parser");
 const ejs=require("ejs");
 const mongoose = require("mongoose");
 const app=express();
+require("dotenv").config();
+
 app.use(bp.urlencoded({extended:true}))
 app.set("view engine","ejs");
 app.use(express.static("public"));
 
+console.log(process.env.MongoKaDongo);
 
 
 
 
-//mongodb+srv://ph:ph123@cluster0.3toix.mongodb.net/myFirstDatabase
-//mongodb+srv://Paras:Paras%402001@cluster0.9t5bt.mongodb.net/todoDB
-mongoose.connect("mongodb+srv://ph:ph123@cluster0.3toix.mongodb.net/myFirstDatabase");
+
+mongoose.connect(process.env.MongoKaDongo);
 const itemSchema={
     name:String,
     email:String,
@@ -69,5 +71,8 @@ app.post("/addItem",(req,res)=>{
     })
  res.redirect("/");
 });
-app
+app.get("/about",(req,res)=>{
+    res.sendFile("/about.html");
+})
+
 app.listen(3000);
